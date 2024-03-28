@@ -1,0 +1,24 @@
+.segment-wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.segment-wrap .btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #40b292;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 2px solid #40b292;
+  cursor: pointer;
+}
+
+.segment-wrap .btn:hover {
+  color: #fff;
+  background-color: #40b292;
+}

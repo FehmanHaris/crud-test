@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "./segmentStyle.css";
+import SegmentPopup from "../segmentPopup/segmentPopup";
 
 const SegmentPage = () => {
-  const [options, setOptions] = useState();
+  const [open, setOpen] = useState(false);
 
   return (
-    <div>
-        <button>enter segment</button>
+    <div className="segment-wrap">
+      <button className="btn" onClick={() => setOpen(!open)}>
+        Save segment
+      </button>
+      <SegmentPopup open={open} setOpen={setOpen} />
     </div>
   );
 };

@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+.segment-popup {
+  width: 35%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 0.3s all ease-in-out;
+  z-index: 100;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.segment-popup.active {
+  right: 0;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrap {
+  width: 100%;
+  height: calc(100vh - 94px);
+  overflow: auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background: #39afbd;
+  gap: 8px;
+  padding: 20px 5px;
+  margin-bottom: 15px;
+}
+.header img {
+  cursor: pointer;
+  filter: invert(1) brightness(1);
+}
+.header .title {
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+}
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 5px;
+}
+input {
+  padding: 10px;
+  font-size: 17px;
+}
+.sub-title {
+  padding: 0 20px;
+  font-family: sans-serif;
+}
+.icon-wrap {
+  padding: 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.icon-wrap .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding-left: 9px;
+}
+.btn-wrap {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(213, 211, 211);
+}
+.btn-wrap button {
+  padding: 12px 18px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  border: 0;
+  cursor: pointer;
+}
+.save-btn {
+  background-color: #71bda7;
+  color: #fff;
+}
+.save-btn:hover {
+  background-color: #fff;
+  color: #71bda7;
+}
+.cancel-btn {
+  background-color: #fff;
+  color: red;
+}
+.cancel-btn:hover {
+  background-color: red;
+  color: #fff;
+}
+.link {
+  padding: 0 20px;
+  margin: 15px 0;
+  border: 0;
+  background: 0;
+  font-size: 15px;
+  font-family: sans-serif;
+  text-decoration: underline;
+  color: #28a1af;
+  cursor: pointer;
+}
+.select-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px 10px 30px;
+  position: relative;
+}
+.select-wrap .dot {
+  position: absolute;
+  left: 10px;
+}
+
+.select-wrap select {
+  width: 100%;
+  padding: 8px 14px;
+  font-size: 16px;
+}
+.remove {
+  font-size: 16px;
+  padding: 8px 10px;
+  border: 1px solid red;
+  background: transparent;
+  color: red;
+  cursor: pointer;
+}
+.remove:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+}
+.dot.gray {
+  background-color: gray;
+}
+.dot.green {
+  background-color: green;
+}
+.dot.red {
+  background-color: red;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .segment-popup {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .segment-popup {
+    width: 100%;
+  }
+}
